@@ -156,4 +156,10 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set helplang=cn
 
 
+" 设置Ctrl+C复制到剪切板
+vmap <c-c> "+y
+
+
+
+
 
