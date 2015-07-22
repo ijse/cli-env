@@ -44,7 +44,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 Plugin 'pangloss/vim-javascript'
 
-
 Plugin 'scrooloose/nerdtree'
 "open nerdtree when open vim without any files
 "autocmd StdinReadPre * let s:std_in=1
@@ -59,6 +58,16 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 Plugin 'Valloric/YouCompleteMe'
 
+" 多光标
+Plugin 'terryma/vim-multiple-cursors'
+let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<C-D-m>'
+
+
 
 Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
@@ -72,8 +81,13 @@ let g:syntastic_check_on_wq = 0
 
 " Ctrl+Y,
 Plugin 'mattn/emmet-vim'
+let g:user_emmet_mode='inv'
 
+" for Dash
+Plugin 'rizzatti/dash.vim'
 
+" git gutter
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,10 +169,14 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set helplang=cn
 
+" 设置backspace键
+set backspace=2
 
 " 设置Ctrl+C复制到剪切板
 vmap <c-c> "+y
 
+" 设置当光标与顶部距离为3行时发生滚动
+set scrolloff=3
 
 
 
