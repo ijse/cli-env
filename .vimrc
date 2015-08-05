@@ -43,6 +43,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 Plugin 'scrooloose/nerdtree'
 "open nerdtree when open vim without any files
@@ -53,10 +54,11 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
 "close vim when there is only nerdtree left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
-Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'Valloric/YouCompleteMe'
 
 " 多光标
 Plugin 'terryma/vim-multiple-cursors'
@@ -65,7 +67,7 @@ let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<C-D-m>'
+let g:multi_cursor_quit_key='<ESC>'
 
 
 
@@ -78,6 +80,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+" Snippets
+Plugin 'vim-scripts/snipMate'
 
 " Ctrl+Y,
 Plugin 'mattn/emmet-vim'
@@ -175,9 +181,35 @@ set backspace=2
 " 设置Ctrl+C复制到剪切板
 vmap <c-c> "+y
 
+
 " 设置当光标与顶部距离为3行时发生滚动
 set scrolloff=3
 
+" 设置允许鼠标
+set mouse=a
 
+" 自动缩进
+set autoindent
+set cindent
 
+" 设置折叠
+set foldenable
 
+" Map key to toggle opt
+function MapToggle(key, opt)
+  let cmd = ':set '.a:opt.'! \| set '.a:opt."?\<CR>"
+  exec 'nnoremap '.a:key.' '.cmd
+  exec 'inoremap '.a:key." \<C-O>".cmd
+endfunction
+command -nargs=+ MapToggle call MapToggle(<f-args>)
+
+" Display-altering option toggles
+MapToggle <F1> hlsearch
+MapToggle <F2> wrap
+MapToggle <F3> list
+
+" Behavior-altering option toggles
+MapToggle <F10> scrollbind
+MapToggle <F11> ignorecase
+MapToggle <F4> paste
+set pastetoggle=<F4>
