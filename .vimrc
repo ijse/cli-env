@@ -40,6 +40,7 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+set t_Co=256
 
 
 Plugin 'pangloss/vim-javascript'
