@@ -87,3 +87,6 @@ alias mnpm="npm --registry=http://r.npm.sankuai.com \
   --cache=$HOME/.npm/.cache/mnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.mnpmrc"
+
+
+set -o vi
