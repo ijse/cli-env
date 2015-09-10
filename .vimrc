@@ -76,8 +76,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
@@ -103,6 +103,9 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " surround
 Plugin 'tpope/vim-surround'
+
+" angular
+Plugin 'burnettk/vim-angular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
