@@ -77,8 +77,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
@@ -95,6 +95,18 @@ Plugin 'rizzatti/dash.vim'
 
 " git gutter
 Plugin 'airblade/vim-gitgutter'
+
+" trailing white spaces
+Plugin 'bronson/vim-trailing-whitespace'
+
+" editor config
+Plugin 'editorconfig/editorconfig-vim'
+
+" surround
+Plugin 'tpope/vim-surround'
+
+" angular
+Plugin 'burnettk/vim-angular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,7 +138,7 @@ set autoindent
 set smarttab
 set shiftround
 
-" 开启行数显示 
+" 开启行数显示
 set nu
 " 相对行号
 set relativenumber number
@@ -152,7 +164,7 @@ set noswapfile
 " 突出显示当前列
 "set cursorcolumn
 " 突出显示当前行
-set cursorline          
+set cursorline
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
 ""好处：误删什么的，如果以前屏幕打开，可以找回
@@ -214,3 +226,11 @@ MapToggle <F10> scrollbind
 MapToggle <F11> ignorecase
 MapToggle <F4> paste
 set pastetoggle=<F4>
+
+" show trailing whitespace
+set list
+set listchars=tab:▸\ ,trail:▫
+
+" smooth scroll
+"map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+"map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
