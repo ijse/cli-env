@@ -57,6 +57,9 @@ map <C-n> :NERDTreeToggle<CR>
 "close vim when there is only nerdtree left
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+Plugin 'suan/vim-instant-markdown'
+let g:instant_markdown_autostart = 0
+
 
 
 "Plugin 'Valloric/YouCompleteMe'
