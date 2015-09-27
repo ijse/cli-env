@@ -110,6 +110,7 @@ Plugin 'tpope/vim-surround'
 
 " angular
 Plugin 'burnettk/vim-angular'
+let g:angular_find_ignore = ['build/', 'dist/', 'node_modules', 'bower_components']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
