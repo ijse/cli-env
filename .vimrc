@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader=","
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -111,6 +113,10 @@ Plugin 'tpope/vim-surround'
 " angular
 Plugin 'burnettk/vim-angular'
 let g:angular_find_ignore = ['build/', 'dist/', 'node_modules', 'bower_components']
+
+" comment plugin
+Plugin 'scrooloose/nerdcommenter'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
