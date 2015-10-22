@@ -217,6 +217,7 @@ set cindent
 
 " 设置折叠
 set foldenable
+set foldmethod=syntax
 
 " Map key to toggle opt
 function MapToggle(key, opt)
