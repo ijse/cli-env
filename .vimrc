@@ -2,11 +2,14 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 let mapleader=","
+"highlight Pmenu ctermbg=238 gui=bold
+highlight PmenuSel guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=White ctermbg=Brown
+highlight Pmenu guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=Yellow ctermbg=DarkGrey cterm=bold
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
+""" alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
@@ -44,9 +47,13 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 0
 set t_Co=256
 
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'ternjs/tern_for_vim'
+let g:tern_map_prefix=","
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
+let g:tern_show_signature_in_pum=1
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'mxw/vim-jsx'
 
 Plugin 'scrooloose/nerdtree'
 "open nerdtree when open vim without any files
