@@ -41,7 +41,7 @@ let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 set t_Co=256
 
 
@@ -81,7 +81,7 @@ Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
@@ -117,6 +117,28 @@ let g:angular_find_ignore = ['build/', 'dist/', 'node_modules', 'bower_component
 " comment plugin
 Plugin 'scrooloose/nerdcommenter'
 
+" Easy motion
+Plugin 'easymotion/vim-easymotion'
+
+" Start page
+Plugin 'mhinz/vim-startify'
+let g:startify_custom_header = [
+            \ ' +---------------------------+',
+            \ ' |  Think different.         |',
+            \ ' |       Think out of box.   |',
+            \ ' +----------------+----------+',
+            \]
+
+" Undo plugin
+Plugin 'sjl/gundo.vim'
+nnoremap <Leader>u :GundoToggle<CR>
+
+" Manage session
+Plugin 'vim-scripts/sessionman.vim'
+set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+nmap <leader>sl :SessionList<CR>
+nmap <leader>ss :SessionSave<CR>
+nmap <leader>sc :SessionClose<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -216,8 +238,9 @@ set autoindent
 set cindent
 
 " 设置折叠
-set foldenable
+"set foldenable
 set foldmethod=syntax
+set foldlevelstart=99
 
 " Map key to toggle opt
 function MapToggle(key, opt)
