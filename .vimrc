@@ -69,6 +69,8 @@ map <C-n> :NERDTreeToggle<CR>
 Plugin 'suan/vim-instant-markdown'
 let g:instant_markdown_autostart = 0
 
+"vue syntax highlight
+Plugin 'posva/vim-vue'
 
 
 "Plugin 'Valloric/YouCompleteMe'
