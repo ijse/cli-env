@@ -15,6 +15,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'othree/html5.vim'
+
+" CSS Syntax
+Plugin 'hail2u/vim-css3-syntax'
 
 " 自动补全html标签
 Plugin 'docunext/closetag.vim'
@@ -52,7 +56,7 @@ let g:tern_map_prefix=","
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 let g:tern_show_signature_in_pum=1
-"Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
 
 Plugin 'scrooloose/nerdtree'
@@ -70,7 +74,8 @@ Plugin 'suan/vim-instant-markdown'
 let g:instant_markdown_autostart = 0
 
 "vue syntax highlight
-Plugin 'posva/vim-vue'
+"Plugin 'darthmail/vim-vue'
+au BufNewFile,BufRead *.vue setf html
 
 
 "Plugin 'Valloric/YouCompleteMe'
@@ -86,15 +91,15 @@ let g:multi_cursor_quit_key='<ESC>'
 
 
 
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"Plugin 'scrooloose/syntastic'
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+"let g:syntastic_always_populate_loc_list = 0
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 
 " Snippets
@@ -130,13 +135,13 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 
 " Start page
-Plugin 'mhinz/vim-startify'
-let g:startify_custom_header = [
-            \ ' +---------------------------+',
-            \ ' |  Think different.         |',
-            \ ' |       Think out of box.   |',
-            \ ' +----------------+----------+',
-            \]
+"Plugin 'mhinz/vim-startify'
+"let g:startify_custom_header = [
+            "\ ' +---------------------------+',
+            "\ ' |  Think different.         |',
+            "\ ' |       Think out of box.   |',
+            "\ ' +----------------+----------+',
+            "\]
 
 " Undo plugin
 Plugin 'sjl/gundo.vim'
@@ -189,7 +194,7 @@ syntax on
 "检测文件类型
 "filetype on
 ""针对不同的文件类型采用不同的缩进格式
-filetype indent on
+"filetype indent on
 "允许插件
 "filetype plugin on
 ""启动自动补全
