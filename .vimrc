@@ -3,8 +3,8 @@ filetype off                  " required
 
 let mapleader=","
 "highlight Pmenu ctermbg=238 gui=bold
-highlight PmenuSel guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=White ctermbg=Brown
-highlight Pmenu guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=Yellow ctermbg=DarkGrey cterm=bold
+"highlight PmenuSel guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=White ctermbg=Brown
+"highlight Pmenu guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=Yellow ctermbg=DarkGrey cterm=bold
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
