@@ -74,7 +74,7 @@ Plugin 'suan/vim-instant-markdown'
 let g:instant_markdown_autostart = 0
 
 "vue syntax highlight
-"Plugin 'darthmail/vim-vue'
+Plugin 'darthmail/vim-vue'
 au BufNewFile,BufRead *.vue setf html
 
 
