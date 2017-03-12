@@ -51,11 +51,11 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 0
 set t_Co=256
 
-Plugin 'ternjs/tern_for_vim'
-let g:tern_map_prefix=","
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-let g:tern_show_signature_in_pum=1
+"Plugin 'ternjs/tern_for_vim'
+"let g:tern_map_prefix=","
+"let g:tern_map_keys=1
+"let g:tern_show_argument_hints='on_hold'
+"let g:tern_show_signature_in_pum=1
 Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
 
@@ -70,13 +70,24 @@ map <C-n> :NERDTreeToggle<CR>
 "close vim when there is only nerdtree left
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-Plugin 'suan/vim-instant-markdown'
-let g:instant_markdown_autostart = 0
+"Plugin 'suan/vim-instant-markdown'
+"let g:instant_markdown_autostart = 0
 
 "vue syntax highlight
-Plugin 'darthmail/vim-vue'
+"Plugin 'posva/vim-vue'
+"Plugin 'tao12345666333/vim-vue'
+
+"less syntax plugin
+Plugin 'groenewege/vim-less'
+
+"vue files support
 au BufNewFile,BufRead *.vue setf html
 
+"pug(jade) syntax highlight
+"Plugin 'digitaltoad/vim-pug'
+
+"aftersyntax plugin
+"Plugin 'vim-scripts/aftersyntax.vim'
 
 "Plugin 'Valloric/YouCompleteMe'
 
@@ -106,11 +117,11 @@ let g:multi_cursor_quit_key='<ESC>'
 Plugin 'vim-scripts/snipMate'
 
 " Ctrl+Y,
-Plugin 'mattn/emmet-vim'
-let g:user_emmet_mode='inv'
+"Plugin 'mattn/emmet-vim'
+"let g:user_emmet_mode='inv'
 
 " for Dash
-Plugin 'rizzatti/dash.vim'
+"Plugin 'rizzatti/dash.vim'
 
 " git gutter
 Plugin 'airblade/vim-gitgutter'
@@ -122,11 +133,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'editorconfig/editorconfig-vim'
 
 " surround
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 
 " angular
-Plugin 'burnettk/vim-angular'
-let g:angular_find_ignore = ['build/', 'dist/', 'node_modules', 'bower_components']
+"Plugin 'burnettk/vim-angular'
+"let g:angular_find_ignore = ['build/', 'dist/', 'node_modules', 'bower_components']
 
 " comment plugin
 Plugin 'scrooloose/nerdcommenter'
@@ -200,7 +211,8 @@ syntax on
 ""启动自动补全
 filetype plugin indent on
 
-set autoread          " 文件修改之后自动载入。
+" 文件修改之后自动载入。
+set autoread
 
 " 取消备份。 视情况自己改
 set nobackup
