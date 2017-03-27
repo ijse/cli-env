@@ -294,3 +294,8 @@ set listchars=tab:▸\ ,trail:▫
 " smooth scroll
 "map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
 "map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+"
+
+" preview image with imgcat
+:autocmd BufEnter *.bmp,*.jpeg,*.ico,*.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
+
