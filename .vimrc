@@ -17,6 +17,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'othree/html5.vim'
 
+Plugin 'GutenYe/json5.vim'
+
 " CSS Syntax
 Plugin 'hail2u/vim-css3-syntax'
 
@@ -133,7 +135,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'editorconfig/editorconfig-vim'
 
 " surround
-"Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " angular
 "Plugin 'burnettk/vim-angular'
