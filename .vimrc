@@ -1,6 +1,13 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
 let mapleader=","
 "highlight Pmenu ctermbg=238 gui=bold
 "highlight PmenuSel guifg=#HEXCODE guibg=#HEXCODE gui=bold ctermfg=White ctermbg=Brown
@@ -119,8 +126,11 @@ let g:multi_cursor_quit_key='<ESC>'
 Plugin 'vim-scripts/snipMate'
 
 " Ctrl+Y,
-"Plugin 'mattn/emmet-vim'
-"let g:user_emmet_mode='inv'
+Plugin 'mattn/emmet-vim'
+let g:user_emmet_mode='inv'
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<C-Y>'
+autocmd FileType html,css,vue EmmetInstall
 
 " for Dash
 "Plugin 'rizzatti/dash.vim'
