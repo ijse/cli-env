@@ -104,11 +104,11 @@ au BufNewFile,BufRead *.vue setf html
 Plugin 'terryma/vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
+let g:multi_cursor_start_key='<F6>'
 let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<ESC>'
-
 
 
 "Plugin 'scrooloose/syntastic'
@@ -164,6 +164,13 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
+
+" TypeScript
+Plugin 'leafgarland/typescript-vim'
+" let g:typescript_indent_disable = 1
+Plugin 'HerringtonDarkholme/yats.vim'
+" Autoformat codes
+Plugin 'Chiel92/vim-autoformat'
 
 " Start page
 "Plugin 'mhinz/vim-startify'
@@ -284,8 +291,8 @@ set autoindent
 set cindent
 
 " 设置折叠
-"set foldenable
-set foldmethod=syntax
+set foldenable
+set foldmethod=indent
 set foldlevelstart=99
 
 " Map key to toggle opt
