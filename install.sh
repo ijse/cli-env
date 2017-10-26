@@ -20,6 +20,10 @@ ln -s ${cwd}/snippets/jsx.snippets $snippetsDir/jsx.snippets
 cd "${HOME}/.vim/bundle/tern_for_vim/"
 npm install
 
-sudo npm install instant-markdown-d -g --verbose
+npm install instant-markdown-d -g --verbose
+
+npm install -g typescript
+cd "${HOME}/.vim/bundle/YouCompleteMe"
+./install.py --js-completer
 
 echo done!

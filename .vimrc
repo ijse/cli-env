@@ -98,7 +98,11 @@ au BufNewFile,BufRead *.vue setf html
 "aftersyntax plugin
 "Plugin 'vim-scripts/aftersyntax.vim'
 
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+if !exists("g:ycm_semantic_triggers")
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 " 多光标
 Plugin 'terryma/vim-multiple-cursors'
@@ -165,7 +169,7 @@ let g:NERDTrimTrailingWhitespace = 1
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
-" TypeScript
+" TypeScript syntax highlight
 Plugin 'leafgarland/typescript-vim'
 " let g:typescript_indent_disable = 1
 Plugin 'HerringtonDarkholme/yats.vim'
