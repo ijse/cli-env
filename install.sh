@@ -22,6 +22,7 @@ npm install
 
 npm install instant-markdown-d -g --verbose
 
+brew install cmake
 npm install -g typescript
 cd "${HOME}/.vim/bundle/YouCompleteMe"
 ./install.py --js-completer
