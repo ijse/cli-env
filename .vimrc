@@ -24,8 +24,21 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'othree/html5.vim'
-
 Plugin 'GutenYe/json5.vim'
+
+Plugin 'mhinz/vim-startify'
+let g:startify_enable_special         = 0
+let g:startify_files_number           = 8
+let g:startify_relative_path          = 1
+let g:startify_change_to_dir          = 1
+let g:startify_update_oldfiles        = 1
+let g:startify_session_autoload       = 1
+let g:startify_session_persistence    = 1
+
+let g:startify_skiplist = [
+            \ 'COMMIT_EDITMSG',
+            \ ]
+autocmd User Startified setlocal buflisted
 
 " CSS Syntax
 Plugin 'hail2u/vim-css3-syntax'
@@ -76,6 +89,8 @@ Plugin 'scrooloose/nerdtree'
 "
 "map to Ctrl+N
 map <C-n> :NERDTreeToggle<CR>
+" for vim-startify session manage
+let NERdTreeHijackNetrw = 0
 
 "close vim when there is only nerdtree left
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
