@@ -17,6 +17,10 @@ rm $snippetsDir/jsx.snippets
 ln -s ${cwd}/snippets/_.snippets $snippetsDir/_.snippets
 ln -s ${cwd}/snippets/jsx.snippets $snippetsDir/jsx.snippets
 
+# node and npm
+curl -L https://git.io/n-install | bash
+n stable
+
 cd "${HOME}/.vim/bundle/tern_for_vim/"
 npm install
 
