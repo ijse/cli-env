@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/liyi16/.oh-my-zsh
+export ZSH=/Users/ijse/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -78,16 +78,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NVM_DIR="/Users/liyi16/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#alias for mnpm
-alias mnpm="npm --registry=http://r.npm.sankuai.com \
-  --cache=$HOME/.npm/.cache/mnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.mnpmrc"
-
 
 set -o vi
 
