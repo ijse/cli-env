@@ -186,9 +186,9 @@ let g:NERDTrimTrailingWhitespace = 1
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
-" TypeScript syntax highlight
-Plugin 'leafgarland/typescript-vim'
-" let g:typescript_indent_disable = 1
+" TypeScript support
+Plugin 'Quramy/tsuquyomi'
+
 Plugin 'HerringtonDarkholme/yats.vim'
 " Autoformat codes
 Plugin 'Chiel92/vim-autoformat'
