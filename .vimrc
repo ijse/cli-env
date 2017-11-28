@@ -88,6 +88,7 @@ Plugin 'scrooloose/nerdtree'
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "
 "map to Ctrl+N
+map ,<C-n> :NERDTreeFind<CR>
 map <C-n> :NERDTreeToggle<CR>
 " for vim-startify session manage
 let NERdTreeHijackNetrw = 0
