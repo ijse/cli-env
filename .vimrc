@@ -25,6 +25,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'othree/html5.vim'
 Plugin 'GutenYe/json5.vim'
+Plugin 'chr4/nginx.vim'
 
 Plugin 'mhinz/vim-startify'
 let g:startify_enable_special         = 0
@@ -100,14 +101,16 @@ let NERdTreeHijackNetrw = 0
 "let g:instant_markdown_autostart = 0
 
 "vue syntax highlight
-"Plugin 'posva/vim-vue'
+Plugin 'posva/vim-vue'
+let g:vue_disable_pre_processors=1
+
 "Plugin 'tao12345666333/vim-vue'
 
 "less syntax plugin
 Plugin 'groenewege/vim-less'
 
 "vue files support
-au BufNewFile,BufRead *.vue setf html
+"au BufNewFile,BufRead *.vue setf html
 
 "pug(jade) syntax highlight
 "Plugin 'digitaltoad/vim-pug'

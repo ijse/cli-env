@@ -16,6 +16,7 @@ rm $snippetsDir/_.snippets
 rm $snippetsDir/jsx.snippets
 ln -s ${cwd}/snippets/_.snippets $snippetsDir/_.snippets
 ln -s ${cwd}/snippets/jsx.snippets $snippetsDir/jsx.snippets
+ln -s ${cwd}/snippets/vue.snippets $snippetsDir/vue.snippets
 
 # node and npm
 curl -L https://git.io/n-install | bash
