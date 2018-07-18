@@ -1,6 +1,9 @@
 snippet vuec
-	import Vue from 'vue'
-	import Component from 'vue-class-component'
+	import {
+		Vue, Component,
+	} from 'vue-property-decorator'
 
-	@Component
-	export default class ${1} extends Vue {${2}}
+	@Component${1}
+	export default class ${1} extends Vue {
+		${3}
+	}

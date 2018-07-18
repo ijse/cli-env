@@ -13,6 +13,7 @@ let mapleader=","
 " highlight menu colors
 hi Pmenu ctermfg=White ctermbg=DarkBlue
 hi PmenuSel ctermfg=Red ctermbg=Yellow cterm=bold
+hi SpellBad ctermbg=None cterm=underline
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -192,6 +193,8 @@ Plugin 'easymotion/vim-easymotion'
 
 " TypeScript support
 Plugin 'Quramy/tsuquyomi'
+" Plugin 'Quramy/tsuquyomi-vue'
+" autocmd BufNewFile,BufRead *.vue set filetype=vue
 
 Plugin 'HerringtonDarkholme/yats.vim'
 " Autoformat codes
