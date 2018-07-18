@@ -19,8 +19,8 @@ ln -s ${cwd}/snippets/jsx.snippets $snippetsDir/jsx.snippets
 ln -s ${cwd}/snippets/vue.snippets $snippetsDir/vue.snippets
 
 # node and npm
-curl -L https://git.io/n-install | bash
-n stable
+n -V || curl -L https://git.io/n-install | bash
+n -V && n stable
 
 cd "${HOME}/.vim/bundle/tern_for_vim/"
 npm install
