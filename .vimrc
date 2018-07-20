@@ -193,8 +193,8 @@ Plugin 'easymotion/vim-easymotion'
 
 " TypeScript support
 Plugin 'Quramy/tsuquyomi'
-" Plugin 'Quramy/tsuquyomi-vue'
-" autocmd BufNewFile,BufRead *.vue set filetype=vue
+Plugin 'Quramy/tsuquyomi-vue'
+autocmd BufNewFile,BufRead *.vue set filetype=vue
 
 Plugin 'HerringtonDarkholme/yats.vim'
 " Autoformat codes
