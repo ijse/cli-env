@@ -236,12 +236,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" 一个 tab 的宽度是4个space
-set tabstop=4
+" 一个 tab 的宽度是2个space
+set tabstop=2
 " 自动缩进使用的space数
-set shiftwidth=4
+set shiftwidth=2
 " 编辑插入tab时，把tab算作的空格数
-set softtabstop=4
+set softtabstop=2
 " 缩进使用空格
 set expandtab
 
