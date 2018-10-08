@@ -25,7 +25,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'othree/html5.vim'
+
 Plugin 'GutenYe/json5.vim'
+autocmd BufNewFile,BufRead *.json set filetype=json5
+
 Plugin 'chr4/nginx.vim'
 
 Plugin 'mhinz/vim-startify'
