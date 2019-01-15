@@ -28,6 +28,8 @@ npm install
 npm install instant-markdown-d -g --verbose
 
 brew install cmake
+brew install fzf ripgrep
+
 npm install -g typescript
 cd "${HOME}/.vim/bundle/YouCompleteMe"
 ./install.py --js-completer

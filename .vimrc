@@ -196,8 +196,8 @@ Plugin 'easymotion/vim-easymotion'
 
 " TypeScript support
 Plugin 'Quramy/tsuquyomi'
-Plugin 'Quramy/tsuquyomi-vue'
-autocmd BufNewFile,BufRead *.vue set filetype=vue
+"Plugin 'Quramy/tsuquyomi-vue'
+"autocmd BufNewFile,BufRead *.vue set filetype=vue
 
 Plugin 'HerringtonDarkholme/yats.vim'
 " Autoformat codes
@@ -348,6 +348,10 @@ set pastetoggle=<F4>
 " show trailing whitespace
 set list
 set listchars=tab:▸\ ,trail:▫
+
+" use fzf
+set rtp+=/usr/local/opt/fzf
+
 
 " smooth scroll
 "map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
