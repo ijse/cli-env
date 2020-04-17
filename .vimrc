@@ -6,7 +6,7 @@ filetype off                  " required
 set path+=**
 
 " Display all matching files when we tab complete
-set wildmenu
+"set wildmenu
 
 let mapleader=","
 
@@ -39,7 +39,6 @@ let g:startify_change_to_dir          = 1
 let g:startify_update_oldfiles        = 1
 let g:startify_session_autoload       = 1
 let g:startify_session_persistence    = 1
-
 let g:startify_skiplist = [
             \ 'COMMIT_EDITMSG',
             \ ]
@@ -84,8 +83,10 @@ set t_Co=256
 "let g:tern_map_keys=1
 "let g:tern_show_argument_hints='on_hold'
 "let g:tern_show_signature_in_pum=1
-Plugin 'pangloss/vim-javascript'
-"Plugin 'mxw/vim-jsx'
+
+"Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'chemzqm/vim-jsx-improve'
 
 Plugin 'scrooloose/nerdtree'
 "open nerdtree when open vim without any files
@@ -122,22 +123,18 @@ Plugin 'groenewege/vim-less'
 "aftersyntax plugin
 "Plugin 'vim-scripts/aftersyntax.vim'
 
-Plugin 'Valloric/YouCompleteMe'
-if !exists("g:ycm_semantic_triggers")
-    let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
-let g:ycm_key_list_select_completion = ['<C-l>', '<Down>']
+" Plugin 'Valloric/YouCompleteMe'
+" let g:ycm_key_list_select_completion = ['<C-l>', '<Down>']
 
 " 多光标
-Plugin 'terryma/vim-multiple-cursors'
-let g:multi_cursor_use_default_mapping=0
+" Plugin 'terryma/vim-multiple-cursors'
+" let g:multi_cursor_use_default_mapping=1
 " Default mapping
-let g:multi_cursor_start_key='<F6>'
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<ESC>'
+" let g:multi_cursor_start_key='<F6>'
+" let g:multi_cursor_next_key='<C-m>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<ESC>'
 
 
 "Plugin 'scrooloose/syntastic'
@@ -152,7 +149,7 @@ let g:multi_cursor_quit_key='<ESC>'
 
 
 " Snippets
-Plugin 'vim-scripts/snipMate'
+"Plugin 'vim-scripts/snipMate'
 
 " Ctrl+Y,
 Plugin 'mattn/emmet-vim'
@@ -163,18 +160,6 @@ autocmd FileType html,css,vue EmmetInstall
 
 " for Dash
 "Plugin 'rizzatti/dash.vim'
-
-" git gutter
-Plugin 'airblade/vim-gitgutter'
-
-" trailing white spaces
-Plugin 'bronson/vim-trailing-whitespace'
-
-" editor config
-Plugin 'editorconfig/editorconfig-vim'
-
-" surround
-Plugin 'tpope/vim-surround'
 
 " angular
 "Plugin 'burnettk/vim-angular'
@@ -194,14 +179,54 @@ let g:NERDTrimTrailingWhitespace = 1
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
+" handlebars
+Plugin 'mustache/vim-mustache-handlebars'
+
+Plugin 'ianks/vim-tsx'
+
+" deoplete.nvim: https://github.com/Shougo/deoplete.nvim
+"Plugin 'Shougo/deoplete.nvim'
+
 " TypeScript support
-Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
+"Plugin 'Quramy/tsuquyomi'
 "Plugin 'Quramy/tsuquyomi-vue'
 "autocmd BufNewFile,BufRead *.vue set filetype=vue
 
-Plugin 'HerringtonDarkholme/yats.vim'
+"Plugin 'peitalin/vim-jsx-typescript'
+
+" ALE: https://github.com/w0rp/ale
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_set_balloons = 1
+
+let g:ale_completion_enabled = 1
+let g:ale_completion_tsserver_autoimport = 0
+let g:airline#extensions#ale#enabled = 1
+let g:ale_linter_aliases = {'typescript.tsx': 'typescript'}
+"let b:ale_linters = ['eslint']
+"set omnifunc=ale#completion#OmniFunc
+
+Plugin 'w0rp/ale'
+
+map ,<C-d> :ALEGoToDefinition<CR>
+map ,s<C-d> :ALEGoToDefinition -split<CR>
+map ,v<C-d> :ALEGoToDefinition -vsplit<CR>
+map ,t<C-d> :ALEGoToDefinition -tab<CR>
+
+map ,<C-t> :ALEGoToTypeDefinition<CR>
+map ,s<C-t> :ALEGoToTypeDefinition -split<CR>
+map ,v<C-t> :ALEGoToTypeDefinition -vsplit<CR>
+map ,t<C-t> :ALEGoToTypeDefinition -tab<CR>
+
+" https://github.com/dyng/ctrlsf.vim
+Plugin 'dyng/ctrlsf.vim'
+let g:ctrlsf_position = 'bottom'
+
+
+"Plugin 'HerringtonDarkholme/yats.vim'
 " Autoformat codes
-Plugin 'Chiel92/vim-autoformat'
+" Plugin 'Chiel92/vim-autoformat'
 
 " Start page
 "Plugin 'mhinz/vim-startify'
@@ -212,16 +237,27 @@ Plugin 'Chiel92/vim-autoformat'
             "\ ' +----------------+----------+',
             "\]
 
+" git gutter
+Plugin 'airblade/vim-gitgutter'
+
+" trailing white spaces
+Plugin 'bronson/vim-trailing-whitespace'
+
+" editor config
+Plugin 'editorconfig/editorconfig-vim'
+
+" surround
+"Plugin 'tpope/vim-surround'
 " Undo plugin
-Plugin 'sjl/gundo.vim'
-nnoremap <Leader>u :GundoToggle<CR>
+" Plugin 'sjl/gundo.vim'
+" nnoremap <Leader>u :GundoToggle<CR>
 
 " Manage session
-Plugin 'vim-scripts/sessionman.vim'
-set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-nmap <leader>sl :SessionList<CR>
-nmap <leader>ss :SessionSave<CR>
-nmap <leader>sc :SessionClose<CR>
+" Plugin 'vim-scripts/sessionman.vim'
+" set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+" nmap <leader>sl :SessionList<CR>
+" nmap <leader>ss :SessionSave<CR>
+" nmap <leader>sc :SessionClose<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -302,14 +338,13 @@ set smartcase
 set encoding=utf-8
 " 自动判断编码时，依次尝试以下编码：
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set helplang=cn
+" set helplang=cn
 
 " 设置backspace键
 set backspace=2
 
 " 设置Ctrl+C复制到剪切板
 vmap <c-c> "+y
-
 
 " 设置当光标与顶部距离为3行时发生滚动
 set scrolloff=3
@@ -349,7 +384,7 @@ set pastetoggle=<F4>
 set list
 set listchars=tab:▸\ ,trail:▫
 
-" use fzf
+" use fzf: https://github.com/junegunn/fzf
 set rtp+=/usr/local/opt/fzf
 
 
@@ -359,5 +394,7 @@ set rtp+=/usr/local/opt/fzf
 "
 
 " preview image with imgcat
-:autocmd BufEnter *.bmp,*.jpeg,*.ico,*.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
+autocmd BufEnter *.bmp,*.jpeg,*.ico,*.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | bw
 
+
+autocmd BufNewFile,BufRead *.js set filetype=javascript
