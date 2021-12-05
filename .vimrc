@@ -25,9 +25,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'othree/html5.vim'
+Plugin 'nikvdp/ejs-syntax'
 
 Plugin 'GutenYe/json5.vim'
 autocmd BufNewFile,BufRead *.json set filetype=json5
+
+Plugin 'rking/ag.vim'
+let g:ag_highlight=1
+
 
 Plugin 'chr4/nginx.vim'
 
@@ -206,6 +211,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_linter_aliases = {'typescript.tsx': 'typescript'}
 "let b:ale_linters = ['eslint']
 "set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_tsserver_autoimport = 1
 
 Plugin 'w0rp/ale'
 
